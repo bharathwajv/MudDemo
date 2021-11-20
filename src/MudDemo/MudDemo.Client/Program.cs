@@ -16,7 +16,8 @@ builder.Services.AddMudServices();
 builder.Services.AddHotKeys();
 builder.Services.AddBlazoredLocalStorage();
 
-builder.Services.AddTransient<INotificationsService, NotificationsService>();
+builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IArticlesService, ArticlesService>();
+builder.Services.AddTransient<INotificationsService, NotificationsService>();
 
 await builder.Build().RunAsync();

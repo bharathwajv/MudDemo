@@ -1,0 +1,32 @@
+﻿@page "/user/cards"
+@inherits CardsBase
+@using MudDemo.Client.Models
+
+<MudText  Class="align-center" Typo="Typo.h6">Cards</MudText>
+<MudBreadcrumbs Separator="." Items="_items"></MudBreadcrumbs>
+<br/>
+<MudContainer>
+    <MudGrid>
+       
+        @foreach(UserModel user in _users)
+        {
+        <MudItem md="4"
+                 sm="12"
+                 xs="12">
+            <MudPaper Class="pa-4"
+                      Elevation="2"
+                      Style="height: 250px; background: #405f6c">
+            </MudPaper>
+        </MudItem>
+        }
+        
+         </MudGrid>
+</MudContainer>
+@code {
+    private List<BreadcrumbItem> _items = new List<BreadcrumbItem>
+    {
+        new BreadcrumbItem("Dashboard", href: "#"),
+        new BreadcrumbItem("User", href: "#"),
+        new BreadcrumbItem("Cards", href: null, disabled: true)
+    };
+}

@@ -73,6 +73,21 @@ public partial class SideMenu
                         {
                             Title = "List",
                             Href = "/user/list"
+                        },
+                        new()
+                        {
+                            Title = "Create",
+                            Href = "/user/create"
+                        },
+                        new()
+                        {
+                            Title = "Edit",
+                            Href = "/user/edit"
+                        },
+                        new()
+                        {
+                            Title = "Account",
+                            Href = "/user/account"
                         }
                     }
                 },
